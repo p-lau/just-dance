@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid:
+    'display'
+    'menu';
+  grid-template-rows: 1fr auto;
+}
+
+.display {
+  grid-area: display;
+  background-color: bisque;
+
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  grid-area: menu;
+  height: 4rem;
+  background-color: azure;
+
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 50rem;
+  height: 100%;
+  display: flex;
+}
+/* menu tabs */
+.tab {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+}
+
+.tab.light{
+  transition: ease-in-out 200ms;
+  background-color: antiquewhite;
+  color: gray;
+}
+
+.tab.light:hover{
+  background-color: black;
+  color: bisque;
+}
+
+.tab.light.active {
+  background-color: darkcyan;
+  color: white;
+}
+/* catalog */
+
+.list::-webkit-resizer{
+  display: none;
+}
+
+.list {
+  scroll-behavior: smooth;
+}
+
+.row {
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.img img {
+  border-radius: 5px;
+  height: 6rem;
+  width: 6rem;
+}
